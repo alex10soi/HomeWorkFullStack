@@ -1,0 +1,232 @@
+.* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+body{
+	font-family: Arial, sans-serif;
+	color: #666;
+	font-size: 15px;
+	line-height: 20px;
+	margin: 0;
+	padding: 0;
+}
+
+
+.header {
+	display: flex;
+	align-items: center;
+	height: 40px;
+	width: auto;
+	background-color: white;
+	color: black;
+}
+
+.logo {
+	font-size: 35px;
+	font-weight: bolder;
+	padding-left: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: middle;
+	flex-grow: 8;
+}
+
+.plus {
+	color: rgba(85, 239, 196,1.0);
+	font-size: 35px;
+	font-weight: 1000px;
+}
+
+.wrapper {
+	width: 600px;
+	min-height: 100%;
+	margin: 0 auto;
+	margin-bottom: -200px;
+	background-color: white;
+}
+
+.item_link_1 {
+	font-size: 10px;
+	text-transform: uppercase;
+	margin-right: auto;
+	flex-grow: 1;
+}
+
+.item_link_2 {
+	flex-grow: 1;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+
+.item_link_3 {
+	flex-grow: 1;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+
+
+A {
+	color: black;
+	text-decoration: none;
+}
+
+A:visited {
+	color: black; 
+}
+
+A:active {
+	color: #ffff00; 
+}
+
+
+.main_content {
+	display: table;
+	min-height: 200px;
+	width: 600px;
+	background-color: rgba(0, 184, 148,1.0);
+	color: black;
+	box-sizing: border-box;
+}
+
+.iphone {
+	display: table-cell;
+	width: 50%;
+	text-align: end;
+	vertical-align: middle;
+	background-image: url(iphone_PNG5724.png);
+	background-size: 150px;
+	background-position: 70% center;
+	background-repeat: no-repeat;
+}
+
+.my_article {
+	display: table-cell;
+	width: 50%;
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+	padding: 15px;
+}
+
+.my_article div {
+	padding-right: 20px;
+}
+
+.footer {
+	display: table;
+	height: 200px;
+	width: 600px;
+	margin: 0 auto;
+	background-color: rgba(0, 184, 148,1.0);
+}
+
+img {
+	background-color: rgba(0, 184, 148,1.0);
+}
+h1 {
+	font-size: 14px;
+	color: white;
+
+}
+
+.my_article p {
+	font-size: 10px;
+	line-height: 1.5;
+}
+
+.contact {
+	display: table-cell;
+	text-align: center;
+	vertical-align: start;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.feature {
+	display: flex;
+	min-height: 200px;         
+	justify-content: center;
+	align-items: flex-end;
+	font-size: 10px;
+	line-height: 1.5;
+	color: black;
+}
+
+.wrapper_item {
+	display: flex;
+	align-items: flex-end;
+}
+
+.item1, .item2, .item3 {
+	display: table;
+	text-align: center;
+}
+
+.item1 {
+	padding-left: 20px;
+}
+
+.item3 {
+	padding-right: 20px;
+}
+
+
+.button {
+	display: table-cell;
+	padding: 5px 10px;
+	border: 1px solid white;
+	border-radius: 5px;
+}
+
+.button A {
+	color: white; 
+	padding: 2px;
+}
+
+.fas,.fab {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 25px;
+	color: white;
+}
+
+.fa-code {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 20px;
+	margin: 0; 
+	padding: 0;
+}
+
+.icon {
+	display: table;
+	text-align: center;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	padding: 5px;
+	margin: 0 auto;
+	background-color: rgba(0, 184, 148,1.0);
+}
+
+
+
+.input1, .input2, .input3, .input4, .input5, .input6, .input7, .input8, .input9,  .input10, .input11, .input12,
+.input13, .input14, .input15, .input16, .input17,  .input18, .input19, .input20, .input21, .input22, .input23,
+.input24 {
+	float: left;
+	font-size: 12px;
+	margin: 5px;
+	text-align: start;
+}
+
+input {
+	padding: 5px;
+}
+
+

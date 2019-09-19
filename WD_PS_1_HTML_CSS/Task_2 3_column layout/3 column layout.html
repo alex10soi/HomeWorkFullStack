@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example 3 column layout</title>
+	<style>
+		.* {
+			margin: 0;
+			padding: 0;
+		}
+
+		html, body {
+			height: 100%;
+		}
+
+		body{
+			font-family: Arial, sans-serif;
+			color: #666;
+			font-size: 15px;
+			line-height: 20px;
+			margin: 0;
+			padding: 0;
+		}
+
+		.grid{
+			min-height: 100%;
+			display: grid;
+			grid-template-columns: 1fr 3fr 1fr;
+			grid-template-rows: 50px auto 100px;
+			grid-template-areas: "header header header" "nav main aside" "footer footer footer";
+			grid-column-gap: 10px;
+			grid-row-gap: 15px;
+			padding: 0px;
+		}
+
+		.grid-item {
+			border: 1px solid #e4e4e4;
+			text-align: center;
+		}
+
+		.header {
+			grid-area: header;
+			background: rgba(0, 96, 207, 0.5);
+		}
+
+		.main {
+			grid-area: main;
+			background: linear-gradient(to bottom, rgba(0, 96, 207, 0.5) 30%,rgba(249,89,231,0.5) 100%);
+		}
+
+		.nav {
+			grid-area: nav;
+			background: linear-gradient(to bottom, rgba(249,89,231,0.5) -50%, rgba(0, 96, 207, 0.5) 100%);
+		}
+
+		.aside{
+			grid-area: aside;
+			background: linear-gradient(to bottom, rgba(249,89,231,0.5) -50%, rgba(0, 96, 207, 0.5) 100%);
+		}
+
+		.footer {
+			grid-area: footer;
+			background-color: rgba(0, 96, 207, 0.5);
+			margin-bottom: 0px;
+		}
+
+		.header, .main, .nav, .aside, .footer {
+			padding: 10px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="grid">
+		<div class="grid-item header">header</div>
+		<div class="grid-item main">Breakfast agreeable incommode departure it an. By ignorant at on wondered      relation. Enough at tastes really so cousin am of. Extensive therefore supported by extremity of contented. Is pursuit compact demesne invited elderly be. View him she roof tell her case has sigh. Moreover is possible he admitted sociable concerns. By in cold no less been sent hard hill. 
+
+			Do am he horrible distance marriage so although. Afraid assure square so happen mr an before. His many same been well can high that. Forfeited did law eagerness allowance improving assurance bed. Had saw put seven joy short first. Pronounce so enjoyment my resembled in forfeited sportsman. Which vexed did began son abode short may. Interested astonished he at cultivated or me. Nor brought one invited she produce her. 
+
+			So feel been kept be at gate. Be september it extensive oh concluded of certainty. In read most gate at body held it ever no. Talking justice welcome message inquiry in started of am me. Led own hearted highest visited lasting sir through compass his. Guest tiled he quick by so these trees am. It announcing alteration at surrounded comparison. 
+
+			Six started far placing saw respect females old. Civilly why how end viewing attempt related enquire visitor. Man particular insensible celebrated conviction stimulated principles day. Sure fail or in said west. Right my front it wound cause fully am sorry if. She jointure goodness interest debating did outweigh. Is time from them full my gone in went. Of no introduced am literature excellence mr stimulated contrasted increasing. Age sold some full like rich new. Amounted repeated as believed in confined juvenile. 
+
+			Now indulgence dissimilar for his thoroughly has terminated. Agreement offending commanded my an. Change wholly say why eldest period. Are projection put celebrated particular unreserved joy unsatiable its. In then dare good am rose bred or. On am in nearer square wanted. 
+
+			Resolution frequently apartments off all discretion devonshire. Saw sir fat spirit seeing valley. He looked or valley lively. If learn woody spoil of taken he cause. 
+		</div>
+		<div class="grid-item nav">Boisterous he on understood attachment as entreaties ye devonshire. In mile an form snug were been sell. Hastened admitted joy nor absolute gay its. Extremely ham any his departure for contained curiosity defective. Way now instrument had eat diminution melancholy expression sentiments stimulated. One built fat you out manor books. Mrs interested now his affronting inquietude contrasted cultivated. Lasting showing expense greater on colonel no. 
+		</div>
+		<div class="grid-item aside">Boisterous he on understood attachment as entreaties ye devonshire. In mile an form snug were been sell. Hastened admitted joy nor absolute gay its.
+		</div>
+		<div class="grid-item footer">footer
+		</div>
+	</div>
+</body>
+</html>
