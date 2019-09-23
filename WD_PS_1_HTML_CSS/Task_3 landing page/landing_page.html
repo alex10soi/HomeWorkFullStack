@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Landig Page</title>
+	<title>Landing Page</title>
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	<link rel="stylesheet" href="landingPage.css">
 	
@@ -11,9 +11,9 @@
 	<div class="wrapper"> 
 		<div class="header"> 
 			<div class="logo">N <span class="plus">++</span></div>
-			<div class="item_link_1"><a href="#"> Products</a></div>
-			<div class="item_link_2"><a href="#"> About us</a></div>
-			<div class="item_link_3"><a href="#"> Contact us</a></div>
+			<div class="item_link_1 header_link"><a href="#"> Products</a></div>
+			<div class="item_link_2 header_link"><a href="#"> About us</a></div>
+			<div class="item_link_3 header_link"><a href="#"> Contact us</a></div>
 		</div>
 		<div class="main_content">
 			<div class="iphone"><img src="img/iphone_PNG5724.png" style="width: 270px;"> </div>
@@ -28,29 +28,26 @@
 		</div>
 		<div class="feature"> 
 			<div class="wrapper_item">
-				<div class="item1">
+				<div class="item1 columns_feature">
 					<a href="#"><div class="icon"><i class="fas fa-code"></i></div></a>
 					<h2>Web development</h2>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
 						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
-						natoque penatibus et magnis dis parturient montes, nascetur
-						ridiculus mus.  </p>
+						natoque penatibus et magnis dis parturient montes. </p>
 				</div>
-				<div class="item2">
+				<div class="item2 columns_feature">
 					<a href="#"><div class="icon"><i class="fab fa-android"></i></div></a>
 					<h2>Mobile development</h2>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
 						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
-						natoque penatibus et magnis dis parturient montes, nascetur
-						ridiculus mus.  </p>
+						natoque penatibus et magnis dis parturient montes.  </p>
 				</div>
-				<div class="item3"> 
+				<div class="item3 columns_feature"> 
 					<a href="#"><div class="icon"><i class="fas fa-cloud"></i></div></a>
 					<h2>Highload</h2>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
 						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
-						natoque penatibus et magnis dis parturient montes, nascetur
-						ridiculus mus.  </p>
+						natoque penatibus et magnis dis parturient montes.  </p>
 				</div>
 			</div>
 		</div>
@@ -61,19 +58,40 @@
 			<p class="form">
 				<form action="/action_page.php" target="_blank" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
 					<div class="input1">
-						First name:<br>
-						<input type="text" name="firstname" value="Miki" size="10"><br>
-						Last name:<br>
-						<input type="text" name="lastname" value="Vanessa" size="10"><br>
-					</div>
-					<div  class="input2">Read your password<br> <input type="password" name="psw" size="10">
-					</div>
+					<input type="text" name="name" placeholder="Type here your name, please">
+					</div><br>
 
-					<div  class="input3">
+					<div class="input2">
+     				 <input type="email" name="email" placeholder="Type here your email, please">
+     				 </div><br>
+
+     				 <div class="input3">
+     				 <input type="tel" name="phone" placeholder="Type here your phone, please">
+     				 </div><br>
+
+     				 <div class="input25"
+     					<textarea name="question" placeholder="Ask your question"  cols="30" rows="5"></textarea>
+     				</div><br>
+
+     				<div class="input26">
+						First name:<br>
+						<input type="text" name="firstname" placeholder="Miki" size="10"><br>
+						Last name:<br>
+						<input type="text" name="lastname" placeholder="Vanessa" size="10">
+					</div><br>
+					
+					<div class="input27">
+					Write your password<br> 
+					<input type="password" name="psw" size="10">
+					</div><br>
+					
+					<div class="radio">
 						<input type="radio" name="gender" value="male" checked style="width: 10px; height: 10px; margin: 5px;"> Male<br>
 						<input type="radio" name="gender" value="female" style="width: 10px; height: 10px; margin: 5px;"> Female<br>
 						<input type="radio" name="gender" value="other" style="width: 10px; height: 10px; margin: 5px;" > Other<br>
 					</div>
+					<br>
+					
 					<div  class="input4">
 						<select name="cars">
 							<option value="volvo">Volvo</option>
@@ -81,34 +99,35 @@
 							<option value="fiat">Fiat</option>
 							<option value="audi">Audi</option>
 						</select>
-					</div>
+					</div><br>
 					<div  class="input5">
 						<input type="submit" placeholder="Submit" ><br>
 						<input type="reset">
-					</div>
+					</div><br>
 					<div  class="input6">
-						<fieldset style="width:100px;"><legend> List field</legend>
+						<fieldset style="width:100%;"><legend> List field</legend>
 							<input type="radio" name="gender" value="male" checked> Male<br>
 							<input type="radio" name="gender" value="female"> Female<br>
 							<input type="radio" name="gender" value="other"> Other
-						</fieldset></div>
+						</fieldset>
+					</div><br>
 					<div  class="input7">
-						<textarea name="message" rows="3" maxlength="5">Hello, my friend!</textarea>
-					</div>
+						<textarea name="message" rows="3" style="margin: 0px 0px 10px; width: 481px; height: 70px;">Hello, my friend!</textarea>
+					</div><br>
 					<div  class="input8">
 						 <button type="button" onclick="alert('Hello World!')">Click Me!</button><br>
-					</div>
+					</div><br>
 					<div  class="input9">
 						0
-						<input type="range" id="a" name="a" value="50" style="width: 60px;">
+						<input type="range" id="a" name="a" value="50" style="width: 200px;">
 						100 +
 						<input type="number" id="b" name="b" value="50" style="width: 40px;" >
 						=
 						<output name="x" for="a b"></output><br>
-					</div>
+					</div><br>
 					<div  class="input10">
-						<label>List browsers</label>
-						<input list="browsers" size="10">
+						<label>List browsers</label><br>
+						<input list="browsers" size="15">
 						<datalist id="browsers">
 							<option value="Internet Explorer"></option>
 							<option value="Firefox"></option>
@@ -116,63 +135,59 @@
 							<option value="Opera"></option>
 							<option value="Safari"></option>
 						</datalist><br>
-				    </div>
+				    </div><br>
 					<div  class="input11">
 						<label>Password</label><br>
 						<input type="password" name="psw" size="10"><br>
-					</div>
+					</div><br>
 					<div  class="input12">
 						<input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
 						<input type="checkbox" name="vehicle2" value="Car"> I have a car<br>
-					</div>
+					</div><br>
 					<div  class="input13">
 						Select your color:
 						<input type="color" name="favcolor" value="#ff0000"><br>
-					</div>
+					</div><br>
 					<div  class="input14">
 						Birthday:
-						<input type="date" name="bday" style="width: 120px;"><br>
-					</div>
+						<input type="date" name="bday"><br>
+					</div><br>
 					<div  class="input15">
-						Birthday(date&time):
-						<input type="datetime-local" name="bdaytime" style="width: 120px;"><br>
-					</div>
+						Birthday(date&time): <br>
+						<input type="datetime-local" name="bdaytime" style="width: 100%;"><br>
+					</div><br>
 					<div  class="input16">
 						E-mail:
 							<input type="email" name="email" size="10"><br>
-					</div>
+					</div><br>
 					<div  class="input17">
 						Select a file: <input type="file" name="myFile"><br><br>
-					</div>
+					</div><br>
 					<div  class="input18">
-						Birthday (month and year):
+						Birthday (month and year): 
 						<input type="month" name="bdaymonth"><br>
-					</div>
+					</div><br>
 					<div  class="input19">
 						Quantity (between 1 and 5):
 						<input type="number" name="quantity" min="1" max="5"><br>
-					</div>
-					<div  class="input20">
-						Search Google:
-						<input type="search" name="googlesearch"><br>
-					</div>
+					</div><br>
 					<div  class="input21">
 						Telephone: 
-						<input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" checked required> 
+						<input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"checked required> 
 						<span>Format: 123-45-678</span> <br>
-					</div>
+					</div><br>
 					<div  class="input22">
 						Select a time:
 						<input type="time" name="usr_time"><br>
-					</div>
+					</div><br>
 					<div  class="input23">
 						Add your homepage:
 						<input type="url" name="homepage"><br>
-					</div>
+					</div><br>
 					<div  class="input24">
 						Select a week:
 						<input type="week" name="year_week"><br>
-					</div>
+					</div><br>
 				</form>
 			</p>
 		</div>

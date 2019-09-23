@@ -69,18 +69,23 @@ body{
 	text-transform: uppercase;
 }
 
+.columns_feature {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.columns_feature p{
+	font-size: 13px;
+}
+
 
 A {
 	color: black;
 	text-decoration: none;
 }
 
-A:visited {
-	color: black; 
-}
-
-A:active {
-	color: #ffff00; 
+.header_link a:hover {
+	color: rgba(0, 184, 148,1.0);
 }
 
 
@@ -127,9 +132,11 @@ A:active {
 img {
 	background-color: rgba(0, 184, 148,1.0);
 }
+
 h1 {
-	font-size: 25px;
+	font-size: 35px;
 	color: white;
+	margin-bottom: 40px
 
 }
 
@@ -139,7 +146,7 @@ h1 {
 }
 
 .contact {
-	display: table-cell;
+	display: block;
 	text-align: center;
 	vertical-align: start;
 	padding-left: 20px;
@@ -148,7 +155,7 @@ h1 {
 
 .feature {
 	display: flex;
-	min-height: 400px;         
+	min-height: 500px;         
 	justify-content: center;
 	align-items: flex-start;
 	font-size: 10px;
@@ -215,16 +222,54 @@ h1 {
 
 
 .input1, .input2, .input3, .input4, .input5, .input6, .input7, .input8, .input9,  .input10, .input11, .input12,
-.input13, .input14, .input15, .input16, .input17,  .input18, .input19, .input20, .input21, .input22, .input23,
-.input24 {
-	float: left;
+.input13, .input14, .input15, .input16, .input17,  .input18, .input19, .input21, .input22, .input23,
+.input24, .input25, .input26, .input27, .radio {
+	display: inline-block;
+	
+	width: 40%;
+	margin: 0;
 	font-size: 12px;
-	margin: 5px;
+	padding: 5px;
 	text-align: start;
+	color: white;
+	font-size: 15px;
+
 }
 
-input {
+.input1 input, .input2 input, .input3 input, .input4 input, .input5 input, .input7 input,
+ .input8 input, .input9 input,  .input10 input, .input11 input, .input12 input,.input13 input, .input14 input,
+  .input15 input, .input16 input, .input17 input,  .input18 input, .input19 input, .input21 input,
+   .input22 input, .input23 input, .input24 input, .input25 input, .input26 input, .input27 input{
+   	width: 100%;
+}
+
+.radio, .input17, .input17 input{
+	padding-left: 0;
+}
+
+fieldset {
+	padding: 0;
+	margin: 0;
+}
+
+fieldset input {
+	width: 20px;
+}
+
+.input12 input {
+	width: auto;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.input13 input {
+	width: 15px;
+}
+
+input, textarea {
 	padding: 5px;
+	margin-bottom: 10px;
+	width: 40%;
 }
 
 
