@@ -130,6 +130,7 @@ A {
 }
 
 img {
+	width: 270px;
 	background-color: rgba(0, 184, 148,1.0);
 }
 
@@ -178,11 +179,13 @@ h1 {
 
 .button {
 	display: table-cell;
-	width: 85px;
-	height: 30px;
+	width: 130px;
+	height: 40px;
 	padding: 5px 10px;
 	border: 1px solid white;
 	border-radius: 5px;
+	color: white;
+	font-size: 16px;
 }
 
 .button A {
@@ -270,6 +273,13 @@ input, textarea {
 	padding: 5px;
 	margin-bottom: 10px;
 	width: 40%;
+	resize: none;
+}
+
+textarea {
+	margin: 0px 0px 10px;
+	width: 100%;
+	height: 70px;
 }
 
 button {
