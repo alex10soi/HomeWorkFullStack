@@ -28,18 +28,15 @@
       float: left;
     }
 
+    .blocks {
+      font-size: 0;
+    }
+
     .blocks .column {
     	display: inline-block;
     	width: 33.33%;
     } 
-    .blocks .column:nth-child(2n) {
-      margin-left: -4px;
-    } 
-    .blocks .column:nth-child(3n) {
-      margin-left: -4px;
-    } 
-
-
+    
     .flexbox {
         display: flex;
     }
@@ -47,13 +44,13 @@
     .flexbox .column {
     	 /*Option_1: flex-basis: 33.5%;*/
     	/* Option_2: width: 33.5%;*/
-        flex-grow: 1;      
+        flex-grow: 1; 
     }
    
 
     .grid{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
     }
     
   </style>

@@ -251,6 +251,7 @@ h1 {
 }
 
 fieldset {
+	width:100%;
 	padding: 0;
 	margin: 0;
 }
@@ -299,6 +300,24 @@ button:hover {
   background-color: white;
   color: #1abc9c;
   cursor: pointer;
+}
+
+.radio input {
+	width: 10px;
+	height: 10px; 
+	margin: 5px;
+}
+
+input[type="range"] {
+	width: 250px;
+}
+
+input[type="number"] {
+	width: 40px;
+}
+
+input[type="datetime-local"] {
+	width: 100%;
 }
 
 
