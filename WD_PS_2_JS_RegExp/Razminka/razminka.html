@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Razminka</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="wrapper" class="wrapper">
+        <div class="box">Task № 1</div>
+        <div class="box_text">
+            Calculate the sum of the numbers between the user entered (for example, from -100 to 100), <br>
+            summing only the numbers that end in 2,3, and 7
+        </div>
+        <input type="number" id="firstNum" class="input" placeholder="Enter first number">
+        <input type="number" id="secondNum" class="input" placeholder="Enter second number">
+        <input type="submit" class="submit" value="Calculate" onclick="calculateSum()">
+        <p id="answerTask1" class="answer"></p>
+        <div class="box">Task № 2</div>
+        <div class="box_text">
+            a) The user enters the time per second. Output in the format: hh: mm: ss (01:05:20)
+        </div>
+        <input type="number" id="secondsInput" class="input" placeholder="Enter the number of seconds">
+        <input type="submit" class="submit" value="Display time" onclick="calculateTimeFromSeconds()">
+        <p id="answerTask2a" class="answer"></p>
+        <div class="box_text">
+            b) The user enters the time in the format hh:mm:ss, print the number of seconds.
+        </div>
+        <input type="text" id="timeInput" class="input" placeholder="Enter the time">
+        <input type="submit" class="submit" value="Display time in seconds" onclick="calculateTimeInSeconds()">
+        <p id="answerTask2b" class="answer"></p>
+        <div class="box">Task № 3</div>
+        <div class="box_text">
+            Calculate the time elapsed between dates and display a message to the user like:<br>
+            2 year (s), 1 month (s), 3 day (s), 5 hour (s), 10 minute (s), 15 second (s).
+        </div>
+        <input type="datetime-local" id="timeLocal1" class="input" placeholder="Enter first time">
+        <input type="datetime-local" id="timeLocal2" class="input" placeholder="Enter second time">
+        <input type="submit" class="submit" value="Calculate" onclick="calculateTimeBetween()">
+        <p id="answerTask3" class="answer"></p>
+        <div class="box">Task № 4</div>
+        <div class="box_text">
+            The user enters the dimensions of the chessboard (in the format ‘13x13’ - the first value is the maximum).
+            Withdraw (as if to draw) a chessboard.
+        </div>
+        <input type="text" id="chess" class="chessSize" placeholder="Enter chessboard size">
+        <input type="submit" class="submit" value="Draw Chessboard" onclick="drawChessboard()">
+        <div id="answerTask4" class="answer answerTask4"></div>
+        <div id="tryAgain" class="answer tryAgain"></div>
+        <div class="box">Task № 5</div>
+        <div class="box_text">
+            The user enters links or ip separated by commas. Then, Display them sorted alphabetically.
+        </div>
+        <textarea id="link" class="link" cols="50" rows="5" placeholder="Enter links or ip"></textarea>
+        <div id="answerTask5" class="answer answerTask5"></div>
+        <div class="box">Task № 6</div>
+        <div class="box_text">
+            EIn textarea we enter the text, in input - the regular text or the text. After clicking the button,
+            display the same text, but everything that fits the regular period is highlighted in yellow (highlighted).
+        </div>
+        <input type="text" id="regex" class="inputRegex" placeholder="Enter regex">
+        <textarea id="regexText" class="regexText" cols="50" rows="3" placeholder="Enter text"></textarea>
+        <input type="submit" class="submit" value="Check Regex Expression" onclick="checkRegexExpression()">
+        <div id="answerTask6" class="answer answerTask6"></div>
+    </div>
+     <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

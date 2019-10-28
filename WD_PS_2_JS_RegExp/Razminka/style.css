@@ -1,0 +1,84 @@
+.* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #666;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 1);
+}
+
+.wrapper {
+    width: 700px;
+    min-height: 100%;
+}
+
+
+.box,
+.box_text,
+.answer {
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+    color: #d3bb89;
+    padding: 15px;
+}
+
+.box {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+input {
+    display: block;
+    width: 200px;
+    margin: 0 0 10px 20px;
+}
+
+.submit {
+	 width: 204px;
+	 background: #c19a49;
+	 outline: none;
+	 margin-top: 20px;
+}
+
+textarea {
+	margin-left: 20px;
+}
+
+.answerTask4 {
+	display: inline-block;
+	padding: 0;
+	margin: 20px 20px;
+	line-height: 50px;
+}
+
+.black{
+	float: left;
+	background: black;
+	width: 50px;
+	height: 50px;
+}
+
+.white{
+	float: left;
+	background: white;
+	width: 50px;
+	height: 50px;
+}
+
+.tryAgain{
+	font-size: 15px;
+	font-weight: bold;
+}
