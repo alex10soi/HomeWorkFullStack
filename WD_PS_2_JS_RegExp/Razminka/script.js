@@ -27,7 +27,7 @@ function calculateSum() {
 // Task2
 function calculateTimeFromSeconds() {
     let timeInput = document.getElementById("secondsInput").value;
-    let oneSecond = 1000;
+    const oneSecond = 1000;
     let hour, minute, sec;
     let timeResult = "";
 
@@ -49,8 +49,8 @@ function calculateTimeFromSeconds() {
 // Task2
 function calculateTimeInSeconds() {
     let sec = 0;
-    let capacityHour = 3600;
-    let capacityMinute = 60;
+    const capacityHour = 3600;
+    const capacityMinute = 60;
     let timeInput = document.getElementById("timeInput").value;
     let timeArray = timeInput.split(":");
 
@@ -73,21 +73,27 @@ function calculateTimeBetween() {
         hour = 0,
         min = 0,
         sec = 0;
-        
+
     let fisrtTime = document.getElementById("timeLocal1").value;
     let secondTime = document.getElementById("timeLocal2").value;
+    let result = document.getElementById("answerTask3");
+
+    if (fisrtTime === "" || fisrtTime === null || secondTime === "" || secondTime === null) {
+        result.innerHTML = "Enter dates and time completely";
+        return;
+    }
 
     let fisrtTimeMil = new Date(fisrtTime).getTime();
     let secondTimeMil = new Date(secondTime).getTime();
     let difference = secondTimeMil - fisrtTimeMil;
 
-    let milInSecond = 1000;
-    let secInMinute = 60;
-    let minInHour = 60;
-    let hourInDay = 24;
-    let dayInMonth = 31;
-    let monthInYear = 12;
-   
+    const milInSecond = 1000;
+    const secInMinute = 60;
+    const minInHour = 60;
+    const hourInDay = 24;
+    const dayInMonth = 31;
+    const monthInYear = 12;
+
     sec = Math.floor(difference / milInSecond) % secInMinute;
     min = Math.floor(difference / (milInSecond * secInMinute)) % minInHour;
     hour = Math.floor(difference / (milInSecond * secInMinute * minInHour)) % hourInDay;
@@ -95,7 +101,7 @@ function calculateTimeBetween() {
     month = Math.floor(difference / (milInSecond * secInMinute * minInHour * hourInDay * dayInMonth)) % monthInYear;
     year = Math.floor(difference / (milInSecond * secInMinute * minInHour * hourInDay * dayInMonth * monthInYear));
 
-    document.getElementById("answerTask3").innerHTML = year + " year (s), " +
+    result.innerHTML = year + " year (s), " +
         month + " month (s), " +
         day + " day (s), " +
         hour + " hour (s), " +
@@ -103,41 +109,51 @@ function calculateTimeBetween() {
         sec + " sec (s). ";
 
 
- // // Second Solution to this exercises
- //    // ______________________________________________
+    // // Second Solution to this exercises
+    //    // ______________________________________________
 
- //    let startTime = 1970;
- //    let fisrtTime = document.getElementById("timeLocal1").value;
- //    let secondTime = document.getElementById("timeLocal2").value;
+    //    let startTime = 1970;
+    //    let fisrtTime = document.getElementById("timeLocal1").value;
+    //    let secondTime = document.getElementById("timeLocal2").value;
+    //   let result = document.getElementById("answerTask3");
 
- //    let fisrtTimeMil = new Date(fisrtTime).getTime();
- //    let secondTimeMil = new Date(secondTime).getTime();
- //    let difference = secondTimeMil - fisrtTimeMil;
+    // if (fisrtTime === "" || fisrtTime === null) {
+    //     result.innerHTML = "Enter dates and time completely";
+    //     return;
+    // }
+    //    let fisrtTimeMil = new Date(fisrtTime).getTime();
+    //    let secondTimeMil = new Date(secondTime).getTime();
+    //    let difference = secondTimeMil - fisrtTimeMil;
 
- //    let newTime = new Date(difference);
- //    alert(new Date(newTime));
- //    document.getElementById("answerTask3").innerHTML = ((newTime.getFullYear() - startTime) + " year (s)" +
- //        " " + newTime.getMonth() + " month (s)" +
- //        " " + (newTime.getDate() - 1) + " day (s)" +
- //        " " + newTime.getHours() + " hours (s)" +
- //        " " + newTime.getMinutes() + " minutes" +
- //        " " + newTime.getSeconds() + " second (s)");
+    //    let newTime = new Date(difference);
+    //    alert(new Date(newTime));
+    //    document.getElementById("answerTask3").innerHTML = ((newTime.getFullYear() - startTime) + " year (s)" +
+    //        " " + newTime.getMonth() + " month (s)" +
+    //        " " + (newTime.getDate() - 1) + " day (s)" +
+    //        " " + newTime.getHours() + " hours (s)" +
+    //        " " + newTime.getMinutes() + " minutes" +
+    //        " " + newTime.getSeconds() + " second (s)");
 }
 
 
-   
+
 
 // Task4
 function drawChessboard() {
     let inputChessSize = document.getElementById("chess").value;
     let answerTask4 = document.getElementById('answerTask4');
+    answerTask4.innerHTML = "";
     let tryAgain = document.getElementById("tryAgain");
-    let chessSizeArray = inputChessSize.split("x");
+    let regex = /x/i;
+    let chessSizeArray = inputChessSize.split(regex);
     let x = chessSizeArray[0];
     let y = chessSizeArray[1];
     let flag = true;
-
-    if (chessSizeArray[0] > 13) {
+    const widthOfSquare = 50; 
+    
+    let maxWidth = (document.getElementById("wrapper").offsetWidth / widthOfSquare) - 1;
+   
+    if (chessSizeArray[0] > maxWidth) {
         tryAgain.innerHTML = "You entered the first value too large (x-axis). Try again. Maximum value 13";
         tryAgain.setAttribute("style", "text-decoration: underline;");
         return;
@@ -177,8 +193,8 @@ linkInput.addEventListener("focus", (event) => {
 
 linkInput.addEventListener("blur", (event) => {
     const regex = [
-        /(http(s)?):\/\/(\w+(-)?\w+\.)+(\w+)((\/)?(\.)?\w+)+/,
-        /(\d+\.)+\d+/
+        /[(http(s)?:\/\/)(www)](\w+(-)?\w+\.)+(\w+)((\/)?(\.)?\w+)+/,
+        /(\d{3}\.){2}\d\.\d/
     ];
 
     let linksArray = event.target.value;
@@ -190,7 +206,17 @@ linkInput.addEventListener("blur", (event) => {
         if (link.match(regex[0])) {
             let a = document.createElement("a");
             let indexSubstring = link.indexOf("//");
-            let resultLink = document.createTextNode(link.slice(indexSubstring + 2));
+            let resultLink = "";
+
+            if (indexSubstring >= 0) {
+                resultLink = document.createTextNode(link.slice(indexSubstring + 2));
+            } else {
+                resultLink = document.createTextNode(link);
+            }
+            if(link.indexOf("https://") === -1 && link.indexOf("http://") === -1){
+                link = "https://" + link;
+            }
+
             a.appendChild(resultLink);
             a.href = link;
             a.target = "_blank";
@@ -199,13 +225,25 @@ linkInput.addEventListener("blur", (event) => {
         }
 
         if (link.match(regex[1])) {
-            let a = document.createElement("a");
-            let resultLink = document.createTextNode(link);
-            a.appendChild(resultLink);
-            a.href = link;
-            a.target = "_blank";
-            a.append(document.createElement("br"));
-            answerTask5.appendChild(a);
+            let arrayLinkElem = link.split(".");
+            let flag = true;
+
+            for (let x of arrayLinkElem) {
+                if (x > 255) {
+                    flag = false;
+                    break;
+                }
+            }
+
+            if (flag) {
+                let a = document.createElement("a");
+                let resultLink = document.createTextNode(link);
+                a.appendChild(resultLink);
+                a.href = link;
+                a.target = "_blank";
+                a.append(document.createElement("br"));
+                answerTask5.appendChild(a);
+            }
         }
     });
 });
