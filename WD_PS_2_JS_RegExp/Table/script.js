@@ -88,6 +88,7 @@ function sortToAlphab(id) {
 }
 
 
+
 function runToResult() {
     const input = document.getElementById("input");
     const select = document.getElementById("select");
@@ -100,6 +101,9 @@ function runToResult() {
 
     if (input.value) {
         goods2 = GOODS.filter((item) => item.name.match(regex));
+        if(select.value){
+            goods2 = filterBySelect(goods2);
+        }
     } else if (select.value) {
         goods2 = GOODS.filter((item) => item.category == select.value);
     } else {
@@ -115,4 +119,9 @@ function runToResult() {
                 </tr>`
     }).join(' ');
     total.innerHTML = sum + "$";
+}
+
+function filterBySelect (arr){
+    let goods2 = arr.filter((item) => item.category == select.value);
+    return goods2;
 }

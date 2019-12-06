@@ -26,16 +26,15 @@ function calculateSum() {
 
 // Task2
 function calculateTimeFromSeconds() {
-    let timeInput = document.getElementById("secondsInput").value;
-    const oneSecond = 1000;
+    const timeInput = document.getElementById("secondsInput").value;
+    const oneHour = 3600;
     let hour, minute, sec;
     let timeResult = "";
 
-    timeInput *= oneSecond;
-    let timetmp = new Date(timeInput);
-    hour = timetmp.getHours();
-    minute = timetmp.getMinutes();
-    sec = timetmp.getSeconds();
+    hour = Math.floor(timeInput / oneHour);
+
+    minute = Math.floor((timeInput - hour * oneHour) / 60);
+    sec = timeInput - ((hour * 3600) + (minute * 60));
     timeResult = "Result is: " + (String(hour).length < 2 ? "0" + hour : hour) + ":" +
         (String(minute).length < 2 ? "0" + minute : minute) + ":" +
         (String(sec).length < 2 ? "0" + sec : sec);
@@ -45,14 +44,13 @@ function calculateTimeFromSeconds() {
 }
 
 
-
 // Task2
 function calculateTimeInSeconds() {
     let sec = 0;
     const capacityHour = 3600;
     const capacityMinute = 60;
-    let timeInput = document.getElementById("timeInput").value;
-    let timeArray = timeInput.split(":");
+    const timeInput = document.getElementById("timeInput").value;
+    const timeArray = timeInput.split(":");
 
     sec += (Number(timeArray[0]) * capacityHour) + (Number(timeArray[1]) *
         capacityMinute) + Number(timeArray[2]);
@@ -64,75 +62,30 @@ function calculateTimeInSeconds() {
 
 // Task3
 function calculateTimeBetween() {
-    // First Solution to this exercises 
-    // ______________________________________________
-
-    let year = 0,
-        month = 0,
-        day = 0,
-        hour = 0,
-        min = 0,
-        sec = 0;
-
-    let fisrtTime = document.getElementById("timeLocal1").value;
-    let secondTime = document.getElementById("timeLocal2").value;
-    let result = document.getElementById("answerTask3");
+    const startTime = 1970;
+    const fisrtTime = document.getElementById("timeLocal1").value;
+    const secondTime = document.getElementById("timeLocal2").value;
+    const result = document.getElementById("answerTask3");
 
     if (fisrtTime === "" || fisrtTime === null || secondTime === "" || secondTime === null) {
         result.innerHTML = "Enter dates and time completely";
         return;
     }
+    const fisrtTimeMil = new Date(fisrtTime).getTime();
+    const secondTimeMil = new Date(secondTime).getTime();
+    const difference = secondTimeMil - fisrtTimeMil;
+    if (difference < 0) {
+        result.innerHTML = "Enter the first date less than the second date";
+        return;
+    }
 
-    let fisrtTimeMil = new Date(fisrtTime).getTime();
-    let secondTimeMil = new Date(secondTime).getTime();
-    let difference = secondTimeMil - fisrtTimeMil;
-
-    const milInSecond = 1000;
-    const secInMinute = 60;
-    const minInHour = 60;
-    const hourInDay = 24;
-    const dayInMonth = 31;
-    const monthInYear = 12;
-
-    sec = Math.floor(difference / milInSecond) % secInMinute;
-    min = Math.floor(difference / (milInSecond * secInMinute)) % minInHour;
-    hour = Math.floor(difference / (milInSecond * secInMinute * minInHour)) % hourInDay;
-    day = Math.floor(difference / (milInSecond * secInMinute * minInHour * hourInDay)) % dayInMonth;
-    month = Math.floor(difference / (milInSecond * secInMinute * minInHour * hourInDay * dayInMonth)) % monthInYear;
-    year = Math.floor(difference / (milInSecond * secInMinute * minInHour * hourInDay * dayInMonth * monthInYear));
-
-    result.innerHTML = year + " year (s), " +
-        month + " month (s), " +
-        day + " day (s), " +
-        hour + " hour (s), " +
-        min + " min (s), " +
-        sec + " sec (s). ";
-
-
-    // // Second Solution to this exercises
-    //    // ______________________________________________
-
-    //    let startTime = 1970;
-    //    let fisrtTime = document.getElementById("timeLocal1").value;
-    //    let secondTime = document.getElementById("timeLocal2").value;
-    //   let result = document.getElementById("answerTask3");
-
-    // if (fisrtTime === "" || fisrtTime === null) {
-    //     result.innerHTML = "Enter dates and time completely";
-    //     return;
-    // }
-    //    let fisrtTimeMil = new Date(fisrtTime).getTime();
-    //    let secondTimeMil = new Date(secondTime).getTime();
-    //    let difference = secondTimeMil - fisrtTimeMil;
-
-    //    let newTime = new Date(difference);
-    //    alert(new Date(newTime));
-    //    document.getElementById("answerTask3").innerHTML = ((newTime.getFullYear() - startTime) + " year (s)" +
-    //        " " + newTime.getMonth() + " month (s)" +
-    //        " " + (newTime.getDate() - 1) + " day (s)" +
-    //        " " + newTime.getHours() + " hours (s)" +
-    //        " " + newTime.getMinutes() + " minutes" +
-    //        " " + newTime.getSeconds() + " second (s)");
+    const newTime = new Date(difference);
+    document.getElementById("answerTask3").innerHTML = ((newTime.getFullYear() - startTime) + " year (s)" +
+        " " + newTime.getMonth() + " month (s)" +
+        " " + (newTime.getDate() - 1) + " day (s)" +
+        " " + newTime.getHours() + " hours (s)" +
+        " " + newTime.getMinutes() + " minutes" +
+        " " + newTime.getSeconds() + " second (s)");
 }
 
 
@@ -140,19 +93,19 @@ function calculateTimeBetween() {
 
 // Task4
 function drawChessboard() {
-    let inputChessSize = document.getElementById("chess").value;
-    let answerTask4 = document.getElementById('answerTask4');
+    const inputChessSize = document.getElementById("chess").value;
+    const answerTask4 = document.getElementById('answerTask4');
     answerTask4.innerHTML = "";
-    let tryAgain = document.getElementById("tryAgain");
-    let regex = /x/i;
-    let chessSizeArray = inputChessSize.split(regex);
-    let x = chessSizeArray[0];
-    let y = chessSizeArray[1];
+    const tryAgain = document.getElementById("tryAgain");
+    const regex = /x/i;
+    const chessSizeArray = inputChessSize.split(regex);
+    const x = chessSizeArray[0];
+    const y = chessSizeArray[1];
     let flag = true;
-    const widthOfSquare = 50; 
-    
-    let maxWidth = (document.getElementById("wrapper").offsetWidth / widthOfSquare) - 1;
-   
+    const widthOfSquare = 50;
+
+    const maxWidth = (document.getElementById("wrapper").offsetWidth / widthOfSquare) - 1;
+
     if (chessSizeArray[0] > maxWidth) {
         tryAgain.innerHTML = "You entered the first value too large (x-axis). Try again. Maximum value 13";
         tryAgain.setAttribute("style", "text-decoration: underline;");
@@ -182,8 +135,8 @@ function drawChessboard() {
 
 
 // Task5
-let linkInput = document.getElementById("link");
-let answerTask5 = document.getElementById("answerTask5");
+const linkInput = document.getElementById("link");
+const answerTask5 = document.getElementById("answerTask5");
 
 
 linkInput.addEventListener("focus", (event) => {
@@ -194,7 +147,7 @@ linkInput.addEventListener("focus", (event) => {
 linkInput.addEventListener("blur", (event) => {
     const regex = [
         /[(http(s)?:\/\/)(www)](\w+(-)?\w+\.)+(\w+)((\/)?(\.)?\w+)+/,
-        /(\d{3}\.){2}\d\.\d/
+        /(([0-2][0-5][0-5])\.)+(([0-9][0-9])+\.?)/
     ];
 
     let linksArray = event.target.value;
@@ -213,7 +166,7 @@ linkInput.addEventListener("blur", (event) => {
             } else {
                 resultLink = document.createTextNode(link);
             }
-            if(link.indexOf("https://") === -1 && link.indexOf("http://") === -1){
+            if (link.indexOf("https://") === -1 && link.indexOf("http://") === -1) {
                 link = "https://" + link;
             }
 
@@ -253,11 +206,11 @@ linkInput.addEventListener("blur", (event) => {
 
 // Task6
 function checkRegexExpression() {
-    let regexInput = document.getElementById("regex").value;
-    let regexText = document.getElementById("regexText").value;
-    let answerTask6 = document.getElementById("answerTask6");
+    const regexInput = document.getElementById("regex").value;
+    const regexText = document.getElementById("regexText").value;
+    const answerTask6 = document.getElementById("answerTask6");
 
-    let regex = new RegExp(regexInput, "ig");
+    const regex = new RegExp(regexInput, "ig");
 
     answerTask6.innerHTML = regexText.replace(regex, "<mark>$&</mark>");
 }
