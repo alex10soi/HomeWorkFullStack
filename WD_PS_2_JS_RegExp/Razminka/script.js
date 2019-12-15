@@ -67,7 +67,7 @@ function calculateTimeBetween() {
     const secondTime = document.getElementById("timeLocal2").value;
     const result = document.getElementById("answerTask3");
 
-    if (fisrtTime === "" || fisrtTime === null || secondTime === "" || secondTime === null) {
+    if (!fisrtTime || !secondTime) {
         result.innerHTML = "Enter dates and time completely";
         return;
     }
@@ -115,7 +115,7 @@ function drawChessboard() {
 
     for (let i = 0; i < y; i++) {
         for (let j = 0; j < x; j++) {
-            let square = document.createElement("div");
+            const square = document.createElement("div");
             if (flag) {
                 square.className = "black";
             } else {
@@ -157,8 +157,8 @@ linkInput.addEventListener("blur", (event) => {
 
     linksArray = linksArray.map((link) => {
         if (link.match(regex[0])) {
-            let a = document.createElement("a");
-            let indexSubstring = link.indexOf("//");
+            const a = document.createElement("a");
+            const indexSubstring = link.indexOf("//");
             let resultLink = "";
 
             if (indexSubstring >= 0) {
@@ -178,7 +178,7 @@ linkInput.addEventListener("blur", (event) => {
         }
 
         if (link.match(regex[1])) {
-            let arrayLinkElem = link.split(".");
+            const arrayLinkElem = link.split(".");
             let flag = true;
 
             for (let x of arrayLinkElem) {
@@ -189,8 +189,8 @@ linkInput.addEventListener("blur", (event) => {
             }
 
             if (flag) {
-                let a = document.createElement("a");
-                let resultLink = document.createTextNode(link);
+                const a = document.createElement("a");
+                const resultLink = document.createTextNode(link);
                 a.appendChild(resultLink);
                 a.href = link;
                 a.target = "_blank";
