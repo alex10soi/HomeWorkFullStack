@@ -4,14 +4,19 @@
 	font-size: 30px; 
 }
 
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
 .select_main_wrapper {
 	display: flex;
 	flex-direction: column;
-	width: 340px;
+	max-width: 340px;
+	box-sizing: border-box;
 	border-radius: 10px;
 	margin: 10px auto;
 	padding: 10px 0;
-
 }
 
 
@@ -30,16 +35,19 @@
 	width: 300px;
 	height: 30px;
 	border-radius: 10px;
-	margin: 2px auto;		
+	margin: 2px auto;
+}
+
+.select_item_2{
+	display: flex;
+	align-items: center;
 }
 
 .visible_item {
 	display: none;
-	vertical-align: center;
-	
 }
 
 .select_item:first-child {
-	margin: 10px auto 2px;
+	margin: 2px auto 2px;
 }
 
