@@ -1,0 +1,32 @@
+#piechart_3d {
+    float: left;
+}
+
+.image_pattern {
+    width: 500px;
+    height: 166px;
+    float: left;
+    /*border: 1px solid red;*/
+}
+
+.image_conteiner1 {
+    background: url(../img/102-b.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.image_conteiner2 {
+    background: url(../img/roskoshnyy_kottedzh_s_polukruglym_erkerom.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.image_conteiner3 {
+    background: url(../img/images.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.image_conteiner1,
+.image_conteiner2,
+.image_conteiner3 {
+    width: 200px;
+    height: 140px;
+}
