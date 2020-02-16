@@ -21,7 +21,7 @@ if (isset($_SESSION['taskResult_7'])) {
         <div class="task_condition">
             <p><strong>Task conditions: </strong> Calculate the sum of numbers from -1000 to 1000</p>
         </div>
-        <form action="mainBrain.php" method="post">
+        <form action="handler.php" method="post">
             <input type="hidden" name="task" value="1">
             <input type="submit" value="Calculate">
         </form>
@@ -37,7 +37,7 @@ if (isset($_SESSION['taskResult_7'])) {
         <div class="task_condition">
             <p><strong>Task conditions: </strong> Calculate the sum of numbers from -1000 to 1000, summing only numbers that end in 2,3, and 7</p>
         </div>
-        <form action="mainBrain.php" method="post">
+        <form action="handler.php" method="post">
             <input type="hidden" name="task" value="2">
             <input type="submit" value="Calculate">
         </form>
@@ -56,7 +56,7 @@ if (isset($_SESSION['taskResult_7'])) {
         </div>
         <div class="task_result">
             <div class="task_upload">
-                <form class="task_uploadForm" action="mainBrain.php" method="post" enctype="multipart/form-data">
+                <form class="task_uploadForm" action="handler.php" method="post" enctype="multipart/form-data">
                     <input type="file" name="uploadFile">
                     <input type="submit" name="loadFile" value="Load">
                 </form>
@@ -79,7 +79,7 @@ if (isset($_SESSION['taskResult_7'])) {
             <p><strong>Task conditions: </strong> Draw a chessboard</p>
         </div>
         <div class="task_result">
-            <form action="mainBrain.php" method="post">
+            <form action="handler.php" method="post">
                 <label for="boardValue">Enter the size of the chessboard. The format, minimum and maximum values ​​are as follows:(max: 10x10 min: 2x2):</label><br>
                 <input id="boardValue" name="boardValue" type="text" required>
                 <input type="hidden" name="task" value="4">
@@ -96,7 +96,7 @@ if (isset($_SESSION['taskResult_7'])) {
         <div class="task_condition">
             <p><strong>Task conditions: </strong> Find the sum of the digits of the entered number.</p>
         </div>
-        <form action="mainBrain.php" method="post">
+        <form action="handler.php" method="post">
             <label for="value">Insert the number:</label><br>
             <input id="value" name="value" type="number" required>
             <input type="hidden" name="task" value="5">
@@ -117,7 +117,7 @@ if (isset($_SESSION['taskResult_7'])) {
              length of the array is 100. Remove repeats from the array, sort, reverse and multiply
               each element by two.</p>
         </div>
-        <form action="mainBrain.php" method="post">
+        <form action="handler.php" method="post">
             <input type="hidden" name="task" value="6">
             <input type="submit" value="Display result">
         </form>
@@ -134,19 +134,18 @@ if (isset($_SESSION['taskResult_7'])) {
         <div class="task_condition">
             <p><strong>Task conditions: </strong> The page should have a counter for counting page visits through the php session.</p>
         </div>
-        <form method="post" action="mainBrain.php">
+        <form method="post" action="handler.php">
             <input type="hidden" name="task" value="7">
             <input type="submit" value="Reset">
         </form>
         <div class="task_result">
               <strong class="result">Result:</strong>
             <output class="task_resultValue"><?php 
+                $resultVisitPage = '<span class="resultVisitPage">' . $_SESSION['taskResult_7'];
                 if($_SESSION['taskResult_7'] == 1) {
-                    echo '<span class="resultVisitPage">' . $_SESSION['taskResult_7'] . 
-                    ' time you visited this page </span';
+                    echo  $resultVisitPage . ' time you visited this page </span';
                 }else{
-                    echo '<span class="resultVisitPage">' . $_SESSION['taskResult_7'] .
-                     'th times you visited this page </span';
+                    echo  $resultVisitPage . 'th times you visited this page </span';
                 }?>      
             </output>
         </div>
@@ -160,7 +159,7 @@ if (isset($_SESSION['taskResult_7'])) {
             the entered text. Consider the Cyrillic alphabet, emoji and special characters. Check
              with any online counter</p>
         </div>
-        <form action="mainBrain.php" method="post">
+        <form action="handler.php" method="post">
             <label for="value">Enter text:</label><br>
             <div class="task_form">
             <textarea id="value" name="value"></textarea>

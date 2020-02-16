@@ -1,6 +1,8 @@
 <?php
 session_start();
 	
+	// Manages the voting process and writes the voting data to a .json file for reading and 
+  // outputting data to the screen in the form of a Pie Chart
 	if($_SERVER['REQUEST_METHOD'] == "POST"){
 		if(isset($_POST['votingItem']) && !isset($_COOKIE['user'])){
 			$cookie_name = "user";
@@ -23,5 +25,5 @@ session_start();
 			$_SESSION['error'] = '<span class="error">You have already voted</span>';
 		}
 	}
-header('Location: index.php');
+	header('Location: index.php');
 ?>
