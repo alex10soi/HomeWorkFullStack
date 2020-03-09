@@ -16,6 +16,15 @@ body{
 	padding: 0;
 }
 
+h1{
+	font-size: 1vw;
+	line-height: 100%;
+}
+
+.wrapper h2 {
+	margin-top: 20px;
+}
+
 
 .header {
 	display: flex;
@@ -50,28 +59,8 @@ body{
 	background-color: white;
 }
 
-.item_link_1 {
-	font-size: 13px;
-	text-transform: uppercase;
-	margin-right: auto;
-	flex-grow: 1;
-}
-
-.item_link_2 {
-	flex-grow: 1;
-	font-size: 13px;
-	text-transform: uppercase;
-}
-
-.item_link_3 {
-	flex-grow: 1;
-	font-size: 13px;
-	text-transform: uppercase;
-}
-
 .columns_feature {
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin: 30px 10px;
 }
 
 .columns_feature p{
@@ -82,6 +71,13 @@ body{
 A {
 	color: black;
 	text-decoration: none;
+}
+
+.header_link a{
+	font-size: 13px;
+	text-transform: uppercase;
+	margin-right: 40px;
+	flex-grow: 1;
 }
 
 .header_link a:hover {
@@ -96,6 +92,7 @@ A {
 	background-color: rgba(0, 184, 148,1.0);
 	color: black;
 	box-sizing: border-box;
+	padding: 30px 0;
 }
 
 .iphone {
@@ -152,6 +149,7 @@ h1 {
 	vertical-align: start;
 	padding-left: 20px;
 	padding-right: 20px;
+	margin-top: 30px;
 }
 
 .feature {
@@ -174,7 +172,6 @@ h1 {
 	display: table;
 	text-align: center;
 	padding-top: 25px;
-
 }
 
 .button {
@@ -186,6 +183,11 @@ h1 {
 	border-radius: 5px;
 	color: white;
 	font-size: 16px;
+	margin-top: 15px;
+}
+
+.btn-send-email {
+	margin: 40px;
 }
 
 .button A {
@@ -193,7 +195,6 @@ h1 {
 	padding: 2px;
 	font-size: 18px;
 	font-weight: 100px;
-
 }
 
 .fas,.fab {
@@ -222,13 +223,10 @@ h1 {
 	background-color: rgba(0, 184, 148,1.0);
 }
 
-
-
 .input1, .input2, .input3, .input4, .input5, .input6, .input7, .input8, .input9,  .input10, .input11, .input12,
 .input13, .input14, .input15, .input16, .input17,  .input18, .input19, .input21, .input22, .input23,
 .input24, .input25, .input26, .input27, .radio {
 	display: inline-block;
-	
 	width: 40%;
 	margin: 0;
 	font-size: 12px;
@@ -236,7 +234,6 @@ h1 {
 	text-align: start;
 	color: white;
 	font-size: 15px;
-
 }
 
 .input1 input, .input2 input, .input3 input, .input4 input, .input5 input, .input7 input,
@@ -244,6 +241,7 @@ h1 {
   .input15 input, .input16 input, .input17 input,  .input18 input, .input19 input, .input21 input,
    .input22 input, .input23 input, .input24 input, .input25 input, .input26 input, .input27 input{
    	width: 100%;
+   	margin-top: 5px;
 }
 
 .radio, .input17, .input17 input{
@@ -321,6 +319,7 @@ input[type="datetime-local"] {
 }
 
 
+/* Styles for the up button at the top of the page. */
 .button_to_top {
 	display: inline-block;
 	width: 70px;
@@ -333,7 +332,6 @@ input[type="datetime-local"] {
 	box-shadow: 0 0 0 4px white, 0 0 0 9px rgb(229, 217, 28);
 	text-align: center;
 	opacity: 0;
-	
 }
 
 .button_to_top:hover .fas {
@@ -341,15 +339,9 @@ input[type="datetime-local"] {
 	font-size: 55px; 
 }
 
-
 .button_to_top .fas {
+	display: inline;
 	font-size: 65px;	
 }
 
-.button_to_top a {
-	display: flex;
-	width: 70px;
-	height: 70px;
-	border-radius: 50%;
-	justify-content: center;
-}
+/*--------------------------------------------------*/

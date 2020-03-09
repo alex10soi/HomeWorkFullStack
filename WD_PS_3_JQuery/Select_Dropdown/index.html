@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Описания сайта">
-  <meta name="keywords" content="Ключевые слова">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="styles.css">
-  <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Описания сайта">
+	<meta name="keywords" content="Ключевые слова">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	<title>Document</title>
 </head>
 <body>
-    <div class="select_main_wrapper">
-      <div id="select_item_0" class="select_box select_item">
-        <img id="select_item_0" class="image" src="images/filtering_1.png"><span id="select_item_0">Select</span>
-      </div>
-    </div>
-  <script src="script.js"></script>
+	<div id="drop_down_main_wrapper"> 
+		<div class="select_wrapper">
+			<div id="select_item_0" class="select_box select_item">
+				<img id="select_item_0" class="image" src="images/filtering_1.png"><span id="select_item_0" class='select_item_text'>Select</span><i class="fas fa-angle-down"></i>
+			</div>
+			<div class="drop_down_list"></div>
+		</div>
+	</div>
+
+<script src="script.js"></script>	
 </body>
 </html>
