@@ -4,10 +4,13 @@
 	font-size: 20px; 
 }
 
+body, html{
+	height: 100%;
+}
 
 #drop_down_main_wrapper {
 	display: flex;
-	flex-basis: 100%; 
+	/*flex-basis: 100%; */
 	align-items: center;
 	justify-content: center;	
 }
