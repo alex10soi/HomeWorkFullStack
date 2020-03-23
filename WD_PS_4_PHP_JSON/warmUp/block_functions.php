@@ -1,18 +1,18 @@
 <?php 
 
   // Task 1: Counts the sum of numbers from -1000 to 1000
-  function countSumNumbers(){
+  function countSumNumbers($x, $y){
     $result = 0;
-    for ($i = -1000; $i <= 1000; $i++) { 
+    for ($i = $x; $i <= $y; $i++) { 
       $result += $i;
     }
     return $result;
   }
 
   // Task 2 Counts the sum of numbers from -1000 to 1000, summing only numbers that end in 2,3, and 7
-  function countSumNumbers_2($regex) {
+  function countSumNumbers_2($regex, $x, $y) {
     $result = 0;
-    for ($i = -1000; $i <= 1000; $i++) { 
+    for ($i = $x; $i <= $y; $i++) { 
       if(preg_match($regex, $i)){
         $result += $i;
       }
@@ -35,7 +35,7 @@
            $directoryFiles[$i] . '" alt="' . $directoryFiles[$i] . '">';
           $filesize = filesize('uploads/'. $directoryFiles[$i]);
           $newFileSize = convertFileSize($filesize);
-          $result .= '<span>' . $directoryFiles[$i] . ' (Size is: ' .  $newFileSize . '</span></a></li>';
+          $result .= '<span>' . $directoryFiles[$i] . ' (Size is: ' .  $newFileSize . ')</span></a></li>';
         }   
       }
       $result .= '</ul></div>';
@@ -146,7 +146,6 @@
   // Task 8: Count the number of lines, letters and spaces in the entered text. Consider the 
   // Cyrillic alphabet, emoji and special characters. Check with any online counter
   function getTaskResult_8($text){
-    $lenghtOfText = strlen($text);
     $textNoLineBreak = preg_replace('/\n/', '/br', $text);
     $amountLines = substr_count($textNoLineBreak, '/br', 0, strlen($textNoLineBreak));
     $amountSpaces = substr_count($textNoLineBreak, ' ', 0, strlen($textNoLineBreak));

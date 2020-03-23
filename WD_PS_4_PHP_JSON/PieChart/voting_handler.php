@@ -14,12 +14,11 @@ session_start();
 			if(file_exists($filename)){
 				$file = json_decode(file_get_contents($filename));
 				$file->{'voting'}->{'House' . $_POST['votingItem']}++;
-				file_put_contents($filename, json_encode($file));
 			}else{
-				$data = ['voting' => ['House1' => 0, 'House2' => 0, 'House3' => 0]];
-				$data['voting']['House' . $_POST['votingItem']]++;
-				file_put_contents($filename, json_encode($data));
+				$file = ['voting' => ['House1' => 0, 'House2' => 0, 'House3' => 0]];
+				$file['voting']['House' . $_POST['votingItem']]++;
 			}
+			file_put_contents($filename, json_encode($file));
 		}else{
 			unset($_SESSION['message']);
 			$_SESSION['error'] = '<span class="error">You have already voted</span>';

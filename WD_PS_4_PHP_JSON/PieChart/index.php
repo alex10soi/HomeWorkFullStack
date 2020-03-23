@@ -1,5 +1,7 @@
 <?php
-session_start();
+	session_start();
+	// The number of points participating in the vote
+	$_SESSION['COUNT_IMAGES'] = 3;
 ?>
 
 <!DOCTYPE html>
@@ -20,9 +22,14 @@ session_start();
 		<div class="voting">
 			<form action="voting_handler.php" method="post">
 				<div class="images_conteiner">
-					<input class="votingItem" type="submit" name="votingItem" value="1">
-					<input class="votingItem" type="submit" name="votingItem" value="2">
-					<input class="votingItem" type="submit" name="votingItem" value="3">
+					<?php 
+						$count = 1;
+						while($count <= $_SESSION['COUNT_IMAGES']){
+							$listInput .= '<input class="votingItem" type="submit" name="votingItem" value="' . $count . '">';
+							$count++; 
+						}
+						echo $listInput;
+					?>
 			  </div>
 			</form>
 		</div>

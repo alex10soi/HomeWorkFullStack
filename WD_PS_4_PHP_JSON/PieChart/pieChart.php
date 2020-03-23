@@ -1,5 +1,5 @@
-<!-- PieChart code (output of voting results in the form of a diagram). -->
 <?php
+  session_start();
   $fileName = "date.json";
   if(file_exists($fileName)){
     $date = json_decode(file_get_contents($fileName));
@@ -38,14 +38,15 @@
 </head>
 <body>
   <div id="piechart_3d" style="width: 700px; height: 500px;"></div>
-  <div class="image_pattern pattern1">
-    <div class="image_conteiner1"></div><span class="image_option">House1</span>
-  </div>
-  <div class="image_pattern pattern2">
-    <div class="image_conteiner2"></div><span class="image_option">House2</span>
-  </div>
-  <div class="image_pattern pattern3">
-    <div class="image_conteiner3"></div><span class="image_option">House3</span>
-  </div>
+  <?php
+    $count = 1;
+    while($count <= $_SESSION['COUNT_IMAGES']){
+      $listInput .= "<div class='image_pattern pattern{$count}'>
+        <div class='image_conteiner{$count}'></div><span class='image_option'>House{$count}</span>
+        </div>";
+      $count++; 
+    }
+    echo $listInput;
+  ?>
 </body>
 </html>
