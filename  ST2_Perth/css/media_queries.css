@@ -1,0 +1,220 @@
+@media (max-width: 575px) {
+  header .main-content > *:not(div) {
+    float: none;
+    display: inline-block;
+    text-align: center;
+  }
+
+  header .main-content {
+    text-align: center;
+  }
+
+  .header-nav {
+    width: 100%;
+    display: block;
+  }
+
+  .box-logo {
+    position: absolute;
+    left: 15px;
+  }
+
+  header h1 {
+    margin-top: 150px;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 0 15px 15px;
+    box-sizing: border-box;
+  }
+
+  .phone {
+    left: 25%;
+    top: 80%;
+  }
+
+  .intro {
+    padding-top: 100px;
+  }
+
+  .ipad {
+    display: none;
+  }
+
+  .intro blockquote,
+  .intro p {
+    width: 90%;
+  }
+
+  .portfolio {
+    padding-top: 50px;
+  }
+
+  .main-content-box {
+    float: none;
+    width: 90%;
+  }
+
+  .portfolio .main-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .devices {
+    width: 500px;
+    left: 0%;
+    top: 75%;
+  }
+
+  .offer h2 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .offer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-box {
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-box a:last-of-type div {
+    margin-right: 0;
+  }
+
+  footer {
+    justify-content: flex-start;
+    padding-left: 15px;
+  }
+
+  .up_button {
+    right: 15px;
+  }
+
+  .enter_email {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .main-content {
+    width: 95%;
+  }
+
+  header p {
+    font-size: 1.4em;
+  }
+
+  .phone {
+    width: 230px;
+    left: 80px;
+    top: 70%;
+  }
+
+  .ipad {
+    width: 250px;
+    top: 80%;
+    left: 55%;
+  }
+
+  .devices {
+    width: 500px;
+    left: 0%;
+    top: 80%;
+  }
+
+  .main-content-box {
+    width: 60%;
+    float: none;
+  }
+
+  .portfolio .main-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer {
+    justify-content: flex-start;
+    padding-left: 50px;
+  }
+
+  .intro {
+    padding-top: 130px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-content {
+    width: 85%;
+  }
+
+  header p {
+    font-size: 1.6em;
+  }
+
+  .phone {
+    width: 250px;
+    left: 130px;
+  }
+
+  .ipad {
+    width: 250px;
+    top: 70%;
+  }
+
+  .devices {
+    width: 700px;
+    left: -25%;
+    top: 68%;
+  }
+
+  .main-content-box {
+    width: 50%;
+  }
+
+  footer {
+    justify-content: flex-start;
+    padding-left: 50px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  header p {
+    font-size: 2em;
+  }
+
+  .main-content {
+    width: 85%;
+  }
+
+  .devices {
+    width: 700px;
+    height: auto;
+    position: absolute;
+    left: -7%;
+    top: 62%;
+    z-index: 1;
+  }
+
+  .ipad {
+    width: 300px;
+    top: 50%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1360px) {
+  .devices {
+    width: 800px;
+    top: 58%;
+  }
+
+  .ipad {
+    width: 350px;
+    top: 45%;
+  }
+}

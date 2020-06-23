@@ -1,0 +1,465 @@
+@import "reset.css";
+
+@font-face {
+  font-family: Kaushan;
+  src: url(../fonts/Kaushan_Script/KaushanScript-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Black Jack";
+  src: url(../fonts/BLACKJAR.TTF) format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat/Montserrat-Light.ttf) format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat bold";
+  src: url(../fonts/Montserrat/Montserrat-BoldItalic.ttf) format("truetype");
+}
+
+* {
+	transition: all .2s;
+}
+
+html,
+body {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  font-family: Montserrat, Arial, serif;
+}
+
+header {
+  width: 100%;
+  height: 740px;
+  background: url(../img/blue-pattern.jpg);
+  position: relative;
+}
+
+.header-nav {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.main-content {
+  width: 75%;
+  min-height: 100px;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.box-logo {
+  width: 110px;
+  height: 110px;
+  background-color: white;
+  box-shadow: 0 4px 0 0 rgba(12, 169, 229, 1), 15px 15px 0 0 rgba(0, 184, 233, 1);
+  display: inline-block;
+  text-align: center;
+  clear: both;
+}
+
+.logo {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  font-family: Kaushan, Arial, serif;
+  color: rgba(12, 169, 229, 1);
+  transform: translate(0, 20%);
+  text-decoration: none;
+}
+
+.menu {
+  width: 40px;
+  height: 40px;
+  float: right;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.fas {
+  font-size: 40px;
+  color: white;
+}
+
+header h1 {
+  font-family: "Black Jack", Arial, serif;
+  font-size: 78px;
+  color: white;
+  margin-top: 90px;
+  display: inline-block;
+  float: right;
+  clear: both;
+}
+
+header p {
+  font-family: Montserrat, Arial, serif;
+  font-size: 35px;
+  color: white;
+  margin-top: 40px;
+  display: inline-block;
+  float: right;
+  clear: both;
+}
+
+header strong {
+  font-family: "Montserrat bold";
+}
+
+header img {
+  clear: both;
+}
+
+.phone {
+  display: block;
+  width: 250px;
+  height: auto;
+  clear: both;
+  position: absolute;
+  left: 270px;
+  top: 60%;
+  z-index: 1;
+}
+
+button {
+  padding: 20px 25px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Montserrat, Arial, serif;
+  background-color: rgba(0, 196, 234, 1);
+  border: 2px solid white;
+  float: right;
+  clear: both;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  box-shadow: -2px 3px 1px 1px rgb(1, 184, 233);
+}
+
+header button:hover,
+header button:hover .fa-cloud-download-alt {
+  background-color: white;
+  color: rgba(0, 196, 234, 1);
+}
+
+.fa-cloud-download-alt,
+.fa-envelope,
+.fa-dribbble,
+.fa-beer {
+  margin-left: 15px;
+  font-size: 16px;
+}
+
+
+.intro,
+.portfolio {
+  height: 755px;
+  background-color: rgb(244, 244, 244);
+  position: relative;
+  z-index: 2;
+  padding-top: 170px;
+  box-sizing: border-box;
+}
+
+.intro h2,
+.intro p,
+.intro blockquote,
+.main-content-box h2,
+.main-content-box p,
+.offer h2 {
+  font-size: 39px;
+  font-family: Montserrat, Arial, serif;
+  color: rgb(84, 84, 84);
+  display: block;
+  margin-bottom: 46px;
+}
+
+.intro p,
+.intro blockquote,
+.main-content-box {
+  width: 60%;
+  font-size: 17px;
+  letter-spacing: .2px;
+  line-height: 1.6;
+  margin-bottom: 27px;
+}
+
+.intro blockquote {
+  border-left: 7px solid rgb(1, 184, 233);
+  padding-left: 20px;
+  box-sizing: border-box;
+  font-style: italic;
+}
+
+.intro button {
+  color: rgb(1, 176, 143);
+  background-color: rgb(244, 244, 244);
+  border: 2px solid rgb(1, 176, 143);
+  float: none;
+  box-shadow: none;
+  margin-top: 80px;
+  padding: 20px 38px;
+}
+
+.intro button:hover,
+.intro button:hover .fa-envelope {
+  color: rgb(244, 244, 244);
+  background-color: rgb(1, 176, 143);
+}
+
+.intro .fa-envelope {
+  color: rgb(1, 176, 143);
+}
+
+.fa-envelope {
+  color: rgba(0, 196, 234, 1);
+  font-size: 17px;
+}
+
+.ipad {
+  width: 450px;
+  height: auto;
+  position: absolute;
+  left: 65%;
+  top: 25%;
+  z-index: 1;
+}
+
+.portfolio {
+  height: 700px;
+  background-color: #FFFFFF;
+  position: relative;
+  z-index: 2;
+  padding-top: 105px;
+}
+
+.main-content-box {
+  width: 42%;
+  font-size: 17px;
+  letter-spacing: .2px;
+  line-height: 1.6;
+  float: right;
+  position: relative;
+}
+
+.main-content-box h2,
+p.main-content-box-phrase {
+  margin-bottom: 35px;
+}
+
+p.main-content-box-phrase,
+.main-content-box p {
+  font-size: 16px;
+  letter-spacing: .2px;
+  line-height: 1.6;
+  font-style: italic;
+  font-family: "Montserrat bold";
+}
+
+.main-content-box p:not(.main-content-box-phrase) {
+  font-size: 17px;
+  font-style: normal;
+  font-family: Montserrat, Arial, serif;
+  margin-bottom: 45px;
+}
+
+.main-content-box button {
+  color: rgb(255, 75, 140);
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 75, 140);
+  float: none;
+  box-shadow: none;
+  margin-top: 25px;
+  padding: 20px 37px;
+  position: absolute;
+  z-index: 3;
+}
+
+.main-content-box button:hover,
+.main-content-box button:hover .fa-dribbble {
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 75, 140);
+}
+
+.devices {
+  width: 1000px;
+  height: auto;
+  position: absolute;
+  left: -7%;
+  top: 40%;
+  z-index: 1;
+}
+
+.offer {
+  height: 375px;
+  background: url(../img/green-pattern.jpg);
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.offer h2 {
+  color: rgb(255, 255, 255);
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 0;
+  padding-top: 120px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.offer button {
+  display: inline-block;
+  color: rgb(244, 244, 244);
+  background-color: rgb(0, 195, 176);
+  border: 2px solid rgb(244, 244, 244);
+  float: none;
+  box-shadow: none;
+  margin-top: 45px;
+  padding: 20px 40px;
+}
+
+.offer button:hover,
+.offer button:hover .fa-beer {
+  color: rgb(0, 195, 176);
+  background-color: rgb(244, 244, 244);
+}
+
+.offer button>span {
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.social {
+  height: 750px;
+  background-color: rgb(244, 244, 244);
+}
+
+.social-item {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border: 3px solid rgb(84, 84, 84);
+  border-radius: 50%;
+  position: relative;
+  margin: 0 30px 75px 0;
+  color: rgb(84, 84, 84);
+
+}
+
+.social-item>i {
+  font-size: 25px;
+  margin-left: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social-box a {
+  text-decoration: none;
+}
+
+.social .main-content {
+  text-align: center;
+  padding-top: 280px;
+}
+
+.social-item:hover {
+  color: rgba(0, 196, 234, 1);
+}
+
+.enter_email {
+  display: inline-block;
+  padding: 15px 15px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.enter_email>i {
+  margin-left: 5px;
+}
+
+#email {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-right: 1px solid rgb(215, 215, 215);
+  background-color: rgb(255, 255, 255);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#email::placeholder {
+  color: rgb(215, 215, 215);
+  font-style: italic;
+}
+
+.social-item-email {
+  font-size: 14px;
+  font-family: "Montserrat bold", Arial, serif;
+  color: rgb(84, 84, 84);
+  margin-right: 20px;
+  letter-spacing: 1.5px;
+}
+
+footer {
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: rgb(84, 84, 84);
+  position: relative;
+}
+
+footer span {
+  color: rgba(0, 196, 234, 1);
+  padding: 0 5px;
+}
+
+footer i {
+  font-style: italic;
+}
+
+.up_button {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(244, 244, 244);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(84, 84, 84);
+  position: absolute;
+  right: 65px;
+  bottom: 30%;
+  border-radius: 10px;
+}
+
+.up_button i {
+  font-size: 23px;
+  color: rgb(84, 84, 84);
+}
+
+.up_button:hover i {
+  color: rgba(0, 196, 234, 1);
+}
